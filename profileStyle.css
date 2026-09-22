@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Motiva+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --background: #171d25;
+    --background-dark: #10151c;
+
+    --panel: #1b2838;
+    --panel-light: #22364a;
+
+    --steam-blue: #1a9fff;
+    --steam-light-blue: #66c0f4;
+    --steam-green: #a4d007;
+
+    --text: #d6d7d8;
+    --text-light: #ffffff;
+    --text-muted: #8f98a0;
+
+    --border: #2a475e;
+}
+
+
+/* =====================================================
+   BASE
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--background-dark);
+}
+
+body {
+    width: 1100px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+    padding: 0;
+
+    font-family: "Motiva Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(42, 71, 94, 0.35),
+            transparent 550px
+        ),
+        linear-gradient(
+            180deg,
+            #171d25 0%,
+            #10151c 100%
+        );
+
+    box-shadow:
+        0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+nav {
+    width: 100%;
+    height: 70px;
+
+    margin: 0;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #171d25,
+            #10151c
+        );
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+nav li {
+    margin: 0 5px 0 0;
+}
+
+nav a {
+    display: block;
+
+    padding: 12px 18px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+nav a:hover {
+    color: white;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(42, 71, 94, 0.8),
+            rgba(27, 40, 56, 0.8)
+        );
+}
+
+nav a:active {
+    color: var(--steam-light-blue);
+}
+
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+h1 {
+    margin: 0 0 25px 0;
+
+    font-size: 36px;
+
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    margin-top: 0;
+
+    color: var(--steam-light-blue);
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   GENERAL CONTENT BOXES
+   ===================================================== */
+
+.bio,
+.skills,
+.Hobbies,
+.Goals,
+.about,
+.images,
+.video {
+
+    margin: 30px 0;
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(34, 54, 74, 0.95),
+            rgba(27, 40, 56, 0.95)
+        );
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   BIO
+   ===================================================== */
+
+.bio {
+    margin-top: 40px;
+
+    border-left: 4px solid var(--steam-blue);
+}
+
+
+/* =====================================================
+   TEXT
+   ===================================================== */
+
+p {
+    color: var(--text);
+}
+
+a {
+    color: var(--steam-light-blue);
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+}
+
+a:hover {
+    color: white;
+
+    text-decoration: underline;
+
+    text-shadow:
+        0 0 8px rgba(102, 192, 244, 0.4);
+}
+
+
+/* =====================================================
+   LISTS
+   ===================================================== */
+
+.skills ul,
+.Hobbies ul,
+.Goals ol {
+
+    margin: 0;
+    padding-left: 25px;
+}
+
+.skills li,
+.Hobbies li,
+.Goals li {
+
+    margin: 8px 0;
+}
+
+.skills li::marker {
+    color: var(--steam-light-blue);
+}
+
+.Hobbies li::marker {
+    color: var(--steam-green);
+}
+
+.Goals li::marker {
+    color: var(--steam-blue);
+}
+
+
+/* =====================================================
+   PROJECTS
+   ===================================================== */
+
+/*
+   The projects section is deliberately given its own
+   spacing so it appears BELOW the navigation.
+*/
+
+.projects {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 50px 0 40px 0;
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22364a,
+            #1b2838
+        );
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5);
+
+    border-radius: 2px;
+}
+
+
+/* Projects title */
+
+.projects h1 {
+
+    margin: 0 0 30px 0;
+
+    color: #ffffff;
+
+    font-size: 36px;
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: 15px;
+}
+
+
+/* =====================================================
+   PROJECT TABLE
+   ===================================================== */
+
+.projects table {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    border-collapse: collapse;
+
+    background: #10151c;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Table header */
+
+.projects thead {
+
+    background:
+        linear-gradient(
+            180deg,
+            #2a475e,
+            #1b2838
+        );
+}
+
+.projects th {
+
+    padding: 17px;
+
+    text-align: left;
+
+    color: #ffffff;
+
+    font-weight: 500;
+
+    border-bottom: 1px solid #3b6380;
+}
+
+
+/* Table cells */
+
+.projects td {
+
+    padding: 17px;
+
+    color: var(--text);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* Table rows */
+
+.projects tbody tr {
+
+    background: rgba(27, 40, 56, 0.8);
+
+    transition:
+        background 0.2s ease;
+}
+
+.projects tbody tr:nth-child(even) {
+
+    background:
+        rgba(34, 54, 74, 0.55);
+}
+
+.projects tbody tr:hover {
+
+    background:
+        rgba(42, 71, 94, 0.9);
+}
+
+
+/* Project links */
+
+.projects td a {
+
+    color: var(--steam-light-blue);
+
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.projects td a:hover {
+
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   SEARCH FORM
+   ===================================================== */
+
+body > div:last-of-type {
+
+    margin: 35px 0;
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(27, 40, 56, 0.95),
+            rgba(16, 21, 28, 0.95)
+        );
+
+    border: 1px solid var(--border);
+}
+
+body > div:last-of-type h3 {
+
+    margin-top: 0;
+}
+
+label {
+
+    color: var(--text-muted);
+
+    margin-right: 10px;
+}
+
+input[type="text"] {
+
+    width: 400px;
+
+    padding: 12px 15px;
+
+    color: white;
+
+    background: #10151c;
+
+    border: 1px solid #31536b;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+
+    border-color: var(--steam-blue);
+
+    box-shadow:
+        0 0 0 2px rgba(26, 159, 255, 0.15);
+}
+
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+
+.button {
+
+    margin-left: 8px;
+
+    padding: 12px 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1a9fff,
+            #66c0f4
+        );
+
+    border: none;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        filter 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button:hover {
+
+    filter: brightness(1.15);
+
+    box-shadow:
+        0 5px 20px rgba(26, 159, 255, 0.3);
+
+    transform: translateY(-1px);
+}
+
+.button:active {
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   IMAGES
+   ===================================================== */
+
+.images {
+
+    overflow: hidden;
+}
+
+.snowdon,
+.scaffel {
+
+    margin: 25px 0;
+    padding: 20px;
+
+    background:
+        rgba(16, 21, 28, 0.6);
+
+    border: 1px solid rgba(42, 71, 94, 0.8);
+}
+
+.images img {
+
+    margin: 8px;
+
+    object-fit: cover;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.55);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.images img:hover {
+
+    transform: scale(1.02);
+
+    border-color: var(--steam-blue);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.7),
+        0 0 12px rgba(26, 159, 255, 0.2);
+}
+
+
+/* =====================================================
+   VIDEOS
+   ===================================================== */
+
+.video {
+
+    overflow: hidden;
+}
+
+.video video {
+
+    display: block;
+
+    width: 900px;
+    height: auto;
+
+    margin: 20px auto;
+
+    background: black;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+
+    margin-top: 60px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #10151c;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+}
+
+footer cite {
+
+    color: var(--steam-light-blue);
+}
+
+
+/* =====================================================
+   SELECTION
+   ===================================================== */
+
+::selection {
+
+    color: white;
+
+    background: var(--steam-blue);
+}
+
+
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #10151c;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #2a475e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #3b6380;
+}
