@@ -8,6 +8,7 @@
     <meta name="description" content="Crazy style website">
     <title>My profile</title>
     <link href="profileStyle.css" rel="stylesheet">
+    <script src = profile.js defer></script>
 </head>
 
 <body>
@@ -22,7 +23,9 @@
         <img src="images/TAHA_AWAN.gif"></img>
     </div>
     <div class="bio">
-        <p>
+        <button onclick="bioChange()">do NOT touch</button>
+
+        <p class = "bio-text">
             Hiya, I am taha and I am a counterstrike 2 fanatic. I have developed and worked on my coding skills by doing
             my disseration on CS2
             The project focused on predicting who had the advantage in the current state of a round in CS2 and who is
@@ -55,7 +58,11 @@
     </div>
     <div class="Goals">
         <h4>Goals</h4>
-        <ol>
+
+        <input type="text" id="new-goal" placeholder="Add a goal...">
+        <button class = "button" onclick="addGoal()">Add Goal</button>
+
+        <ol id="goal-list">
             <li>Conquer the world</li>
             <li>Scroll every single instagram reel</li>
             <li>go up K2</li>
